@@ -85,15 +85,10 @@ function createGallery(images) {
 }
 
 function clickImage(event) {
-  event.preventDefault()      //cancel default action.
+  event.preventDefault()      
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-  // if(event.target === event.currentTarget) {
-  //    return;               // user clicked between images
-  // }
-  // console.log("target", event.target);
-  
 
   const openModal = event.target.dataset.source;
   const instance = basicLightbox.create(`
